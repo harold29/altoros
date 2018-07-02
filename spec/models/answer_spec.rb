@@ -12,6 +12,6 @@ RSpec.describe Answer, type: :model do
   end
   
   it "belongs to question" do
-    should belong_to(:answer)
+    should belong_to(:question)
   end
 end
