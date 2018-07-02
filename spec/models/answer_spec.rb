@@ -3,15 +3,22 @@ require 'rails_helper'
 RSpec.describe Answer, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 
-  it "is valid with content" do
-    should validate_presence_of(:content)
+  context "when is valid" do
+    it { should validate_presence_of(:content) }
+  end
+
+  context "belong to user" do
+    it { should belong_to(:user) }
   end
   
-  it "belongs to user" do
-    should belong_to(:user)
+  context "belong to question" do
+    it { should belong_to(:question) }
   end
-  
-  it "belongs to question" do
-    should belong_to(:question)
+
+  context "without content" do
+    it "is not valid" do
+      answer = build(:answer, content: nil)
+      expect(answer).to_not be_valid
+    end
   end
 end
