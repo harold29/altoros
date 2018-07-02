@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/harold29/altoros/badge.svg?branch=master)](https://coveralls.io/github/harold29/altoros?branch=master)
+[![Build Status](https://travis-ci.org/harold29/altoros.png?branch=master)](https://travis-ci.org/harold29/altoros) [![Coverage Status](https://coveralls.io/repos/github/harold29/altoros/badge.svg?branch=master)](https://coveralls.io/github/harold29/altoros?branch=master)
 
 
 # Altoros - Test
