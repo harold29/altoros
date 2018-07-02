@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.5.1
+before_script:
+- bundle exec rake db:create --all
+- bundle exec rake db:migrate
+script:
+- bundle exec rake ci:tests
+services:
+- postgresql
+notifications:
+  email: false
+60d779ed-8125-4411-b5c7-37c8d3353280:
+  secure: f+0l7zdhkappq8XvbZg/AI3oRtoVJwPC0PXJ/4jsBte2Y4td8F5OiH8ogMR6GcMAIycLenmSGLVKy0NC/ezBXztMomc7asDfmeF6PI9mVqtlegE65PfAOzLvbLi289NNs0iujj9ax4TSksvLmjRw35OfSR5hHusFz5XxWdhCCwDweT7P87WDwDSYI/7WVyNLy99Osn3pcUD11AIK8nHynDhaoW2kCAbsTh5rzZuRXpC3BsdTNLwx7QgF7MBPjcX2g7gO73ERWBM3o2QfnVRDvHZfWie9/XFpvx/WFrhKNQXXZtsfLCEyGWNA8igfpcu0MU1NtSq2nroTj09m3YXp+FVOqLcYqp2wjtH+lWn52oXwVU8IgzbGEni8idsjqbJ0If5GS3XuMFj5XbEHOcm7RBsKCmv2mdPZCMqGH9TRH9G77laGZNXqy2SvPk/jKgRJe5wGr6inl4FLPwLCBIHQ9Alh3XA/nSGUJhl5jn+FLeqo0WW3y7ZkO2e6SbQ7Qr9Gw2/5/Novgmvca4sQ91AavY8RIr00zrlNNH1BCOxXz3Cwia8M+dXfveT3+nDEUw+84UECReWMhYqCyvTo62u9IYaSSLCm5qbSB82ngs/OvAdn5DesL6q8xD4sUOa2zKSBTxxfmWQ8FLD/E+wJwtc+9+XSZA+AWhKreecS5XNjwQo=
