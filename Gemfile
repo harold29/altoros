@@ -33,6 +33,9 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'coveralls', require: false
 end
 
 group :development do
