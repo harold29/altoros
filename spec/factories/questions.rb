@@ -1,7 +1,12 @@
 FactoryBot.define do
   factory :question do
     content "Potato or poteito?"
+    private_question false
     user
+
+    trait :private do
+      private_question true
+    end
 
     factory :random_question do
       content Faker::Lorem.question
@@ -13,6 +18,16 @@ FactoryBot.define do
 
     factory :nonuser_question do
       user nil
+    end
+
+    factory :questions_with_answers do
+      transient do
+        answers_count 5
+      end
+
+      after :create do |question, evaluator|
+        create_list :answers, evaluator.answers_count, :random_user, question: question
+      end
     end
   end
 end
