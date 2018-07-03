@@ -25,5 +25,15 @@ FactoryBot.define do
         create_list :questions_with_answers, evaluator.questions_count, user: user
       end
     end
+
+    factory :user_with_private_question do
+      transient do
+        questions_count 3
+      end
+
+      after :create do |user, evaluator|
+        create_list :questions_with_answers, evaluator.questions_count, :private, user: user
+      end
+    end
   end
 end
