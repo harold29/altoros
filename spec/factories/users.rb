@@ -22,7 +22,7 @@ FactoryBot.define do
       end
 
       after :create do |user, evaluator|
-        create_list :questions, evaluator.questions_count, user: user
+        create_list :questions_with_answers, evaluator.questions_count, user: user
       end
     end
   end
