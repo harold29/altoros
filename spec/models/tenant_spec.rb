@@ -30,6 +30,21 @@ RSpec.describe Tenant, type: :model do
       tenant = build(:tenant, failed_requests: -1)
       expect(tenant).to_not be_valid
     end
+
+    it "is not valid if nil successful requests" do
+      tenant = build(:nil_successful_tenant)
+      expect(tenant).to_not be_valid
+    end
+
+    it "is not valid if nil failed requests" do
+      tenant = build(:nil_failed_tenant)
+      expect(tenant).to_not be_valid
+    end
+
+    it "is not valid if nil api key" do
+      tenant = build(:nil_key_tenant)
+      expect(tenant).to_not be_valid
+    end
   end
 
   context "when issue full name" do

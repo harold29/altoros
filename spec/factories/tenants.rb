@@ -22,23 +22,23 @@ FactoryBot.define do
       last_name nil
     end
 
-    factory :negative_successful_requests do
+    factory :n_successful_tenant do
       successful_requests { -1 }
     end
 
-    factory :negative_failed_requests do
+    factory :n_failed_tenant do
       failed_requests { -1 }
     end
 
-    factory :nil_successful_requests do
+    factory :nil_successful_tenant do
       successful_requests nil
     end
 
-    factory :nil_failed_requests do
+    factory :nil_failed_tenant do
       failed_requests { -1 }
     end
 
-    factory :nil_api_key do
+    factory :nil_key_tenant do
       api_key nil
     end
   end
