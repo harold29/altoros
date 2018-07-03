@@ -15,34 +15,14 @@
         1,
         null
       ],
-<<<<<<< HEAD
       "/home/flyingpotato/job-tests/altoros/app/controllers/answers_controller.rb": [
         1,
         1,
         null,
         null,
-=======
-      "/home/flyingpotato/job-tests/altoros/app/models/answer.rb": [
-        1,
         1,
         1,
         null,
-        1,
-        null
-      ],
-      "/home/flyingpotato/job-tests/altoros/app/models/question.rb": [
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/home/flyingpotato/job-tests/altoros/app/models/tenant.rb": [
-        1,
-        1,
->>>>>>> 4-tests
-        1,
-        1,
         1,
         null,
         null,
@@ -214,7 +194,6 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/home/flyingpotato/job-tests/altoros/app/models/tenant.rb": [
         1,
         1,
@@ -223,64 +202,6 @@
         1,
         1,
         null
-=======
-      "/home/flyingpotato/job-tests/altoros/app/controllers/tenants_controller.rb": [
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/flyingpotato/job-tests/altoros/app/controllers/application_controller.rb": [
-        0,
-        0
->>>>>>> 4-tests
       ],
       "/home/flyingpotato/job-tests/altoros/app/controllers/users_controller.rb": [
         1,
@@ -358,10 +279,6 @@
         0
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1530652748
-=======
-    "timestamp": 1530596437
->>>>>>> 4-tests
+    "timestamp": 1530655854
   }
 }
