@@ -36,8 +36,9 @@ ActiveRecord::Schema.define(version: 2018_07_02_232948) do
   create_table "tenants", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "failed_requests"
-    t.integer "successful_requests"
+    t.integer "failed_requests", default: 0
+    t.integer "successful_requests", default: 0
+    t.boolean "private_question", default: false
     t.string "api_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
