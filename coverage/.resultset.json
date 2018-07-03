@@ -1,11 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/flyingpotato/job-tests/altoros/app/models/answer.rb": [
+      "/home/flyingpotato/job-tests/altoros/app/models/user.rb": [
         1,
         1,
         1,
         null,
+        1,
         1,
         null
       ],
@@ -14,18 +15,27 @@
         1,
         null
       ],
-      "/home/flyingpotato/job-tests/altoros/app/models/question.rb": [
+      "/home/flyingpotato/job-tests/altoros/app/models/answer.rb": [
+        1,
         1,
         1,
         null,
         1,
         null
       ],
-      "/home/flyingpotato/job-tests/altoros/app/models/user.rb": [
+      "/home/flyingpotato/job-tests/altoros/app/models/question.rb": [
         1,
         1,
         1,
         null,
+        1,
+        null
+      ],
+      "/home/flyingpotato/job-tests/altoros/app/models/tenant.rb": [
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         null
@@ -88,6 +98,59 @@
         0
       ],
       "/home/flyingpotato/job-tests/altoros/app/controllers/questions_controller.rb": [
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/flyingpotato/job-tests/altoros/app/controllers/tenants_controller.rb": [
         0,
         0,
         null,
@@ -216,6 +279,6 @@
         0
       ]
     },
-    "timestamp": 1530573478
+    "timestamp": 1530645420
   }
 }

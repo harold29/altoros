@@ -15,5 +15,15 @@ FactoryBot.define do
     factory :last_nameless_user, class: User do
       last_name nil
     end
+
+    factory :user_with_questions do
+      transient do
+        questions_count 3
+      end
+
+      after :create do |user, evaluator|
+        create_list :questions, evaluator.questions_count, user: user
+      end
+    end
   end
 end
