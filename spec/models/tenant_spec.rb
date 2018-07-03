@@ -11,37 +11,37 @@ RSpec.describe Tenant, type: :model do
   end
 
   context "when is invalid" do
-    it "is not valid without first_name" do
+    it "is without first_name" do
       tenant = build(:tenant, first_name: nil)
       expect(tenant).to_not be_valid
     end
 
-    it "is not valid without last_name" do
+    it "is without last_name" do
       tenant = build(:tenant, last_name: nil)
       expect(tenant).to_not be_valid
     end
 
-    it "is not valid if negative successful requests" do
+    it "has negative successful requests" do
       tenant = build(:tenant, successful_requests: -1)
       expect(tenant).to_not be_valid
     end
 
-    it "is not valid if negative failed requests" do
+    it "has negative failed requests" do
       tenant = build(:tenant, failed_requests: -1)
       expect(tenant).to_not be_valid
     end
 
-    it "is not valid if nil successful requests" do
+    it "has nil successful requests" do
       tenant = build(:nil_successful_tenant)
       expect(tenant).to_not be_valid
     end
 
-    it "is not valid if nil failed requests" do
+    it "has nil failed requests" do
       tenant = build(:nil_failed_tenant)
       expect(tenant).to_not be_valid
     end
 
-    it "is not valid if nil api key" do
+    it "has nil api key" do
       tenant = build(:nil_key_tenant)
       expect(tenant).to_not be_valid
     end
