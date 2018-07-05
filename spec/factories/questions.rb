@@ -26,7 +26,7 @@ FactoryBot.define do
       end
 
       after :create do |question, evaluator|
-        create_list :answers, evaluator.answers_count, :random_user, question: question
+        create_list :answer, evaluator.answers_count, question: question
       end
     end
   end

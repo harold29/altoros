@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1
   def show
+    logger.warn SerializableQuestion.new(@question).serialized_json
     render json: @question
   end
 

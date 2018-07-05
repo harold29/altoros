@@ -3,7 +3,7 @@ FactoryBot.define do
     content "Definitely poteito"
     user
     question
-
+    
     factory :random_answer do
       content Faker::Lorem.sentence
     end

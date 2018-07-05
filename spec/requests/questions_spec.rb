@@ -11,7 +11,7 @@ RSpec.describe "Questions", type: :request do
   describe "GET /question" do
     it "get a public question" do
       user = create(:user_with_questions)
-      get questions_path, params: { question_id: user.questions[0].id }
+      get question_path, params: { question_id: user.questions[0].id }
       expect(response).to have_http_status(200)
 
       json = JSON.parse(response.body)
@@ -24,7 +24,7 @@ RSpec.describe "Questions", type: :request do
 
     it "returns a 403 status for a private question" do
       user = create(:user_with_private_questions)
-      get questions_path, params: { question_id: user.questions }
+      get question_path, params: { question_id: user.questions }
 
       expect(response).to have_http_status(403)
     end
