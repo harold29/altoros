@@ -11,7 +11,7 @@ RSpec.describe "Questions", type: :request do
   describe "GET /question" do
     it "get a public question" do
       user = create(:user_with_questions)
-      get question_path(1)
+      get question_path(user.questions[0].id)
       expect(response).to have_http_status(200)
 
       json = JSON.parse(response.body)
