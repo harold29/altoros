@@ -10,8 +10,11 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1
   def show
-    logger.warn SerializableQuestion.new(@question).serialized_json
-    render json: @question
+    if @question.private_question
+      render json: {}, status: :forbidden
+    else
+      render json: @question
+    end
   end
 
   # POST /questions
