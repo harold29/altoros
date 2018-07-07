@@ -12,4 +12,12 @@ class Tenant < ApplicationRecord
   def requests
     self.successful_requests + self.failed_requests
   end
+
+  def add_s_request
+    self.successful_requests += 1
+  end
+
+  def add_f_request
+    self.failed_requests += 1
+  end
 end
