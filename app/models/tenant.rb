@@ -1,4 +1,6 @@
 class Tenant < ApplicationRecord
+  before_validation :generate_api_key
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :api_key, presence: true
@@ -11,5 +13,21 @@ class Tenant < ApplicationRecord
 
   def requests
     self.successful_requests + self.failed_requests
+  end
+
+  def add_success_req
+    self.successful_requests += 1
+    self.save
+  end
+
+  def add_fail_req
+    self.failed_requests += 1
+    self.save
+  end
+
+  private
+
+  def generate_api_key
+    self.api_key = SecureRandom.hex
   end
 end

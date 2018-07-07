@@ -41,10 +41,10 @@ RSpec.describe Tenant, type: :model do
       expect(tenant).to_not be_valid
     end
 
-    it "has nil api key" do
-      tenant = build(:nil_key_tenant)
-      expect(tenant).to_not be_valid
-    end
+    # it "has nil api key" do
+    #   tenant = build(:nil_key_tenant)
+    #   expect(tenant).to_not be_valid
+    # end
   end
 
   context "when issue full name" do
