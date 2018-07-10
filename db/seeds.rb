@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+FactoryBot.create(:user_with_questions)
+FactoryBot.create(:user_with_private_question)
+FactoryBot.create(:user_with_random_questions)
+FactoryBot.create(:tenant)
