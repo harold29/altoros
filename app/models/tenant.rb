@@ -7,6 +7,8 @@ class Tenant < ApplicationRecord
   validates :successful_requests, numericality: { greater_than_or_equal_to: 0 }
   validates :failed_requests, numericality: { greater_than_or_equal_to: 0 }
 
+  attr_accessor :requests
+
   def full_name
     self.first_name + " " + self.last_name
   end
