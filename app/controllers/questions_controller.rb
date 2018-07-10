@@ -6,13 +6,15 @@ class QuestionsController < ApplicationController
   def index
     if params[:q]
       @questions = Question.matching_terms(params[:q]).select{ |x| x.private_question == false }
-      logger.warn @questions.blank?
       unless @questions.blank?
+        @tenant.add_success_req
         render json: @questions
       else
+        @tenant.add_fail_req
         render json: {text: "no content"}, status: :no_content
       end
     else
+      @tenant.add_fail_req
       render json: {error: 'Bad request. Query is missing'}, status: :bad_request
     end
   end
