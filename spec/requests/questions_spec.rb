@@ -2,10 +2,16 @@ require 'rails_helper'
 
 RSpec.describe "Questions", type: :request do
   describe "GET /questions" do
-    it "works!" do
+    it "without query param does return bad request" do
       tenant = create(:tenant)
       get questions_path(api_key: tenant.api_key)
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(400)
+    end
+
+    it "with empty param does return no content" do
+      tenant = create(:tenant)
+      get questions_path(api_key: tenant.api_key, q: "")
+      expect(response).to have_http_status(204)
     end
   end
 
