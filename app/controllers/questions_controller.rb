@@ -5,9 +5,9 @@ class QuestionsController < ApplicationController
   # GET /questions
   def index
     if params[:q]
-      @questions = Question.matching_terms(params[:q])
+      @questions = Question.matching_terms.select(params[:q]){ |x| x.private_question == false }
     else
-      @questions = Question.all
+      @questions = Question.all.select{ |x| x.private_question == false }
     end
     render json: @questions
   end
