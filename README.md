@@ -3,25 +3,29 @@
 
 # Altoros - Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Heroku**: https://altoros-test.herokuapp.com
 
-Things you may want to cover:
+**Tenant API_KEY**: 4415c2d1b9555b28112f3b776ce9ee37
 
-* Ruby version
+**Requests:**
 
-* System dependencies
+Questions
+`https://altoros-test.herokuapp.com/questions?api_key=[api_key]&q=[query]`
 
-* Configuration
+If query param is empty it returns all questions
 
-* Database creation
+Specific Question
+`https://altoros-test.herokuapp.com/questions/[question_id]?api_key=[api_key]`
 
-* Database initialization
+You can also send the api_key as a header.
 
-* How to run the test suite
+To get the dashboard page:
 
-* Services (job queues, cache servers, search engines, etc.)
+`https://altoros-test.herokuapp.com`
 
-* Deployment instructions
+Please run:
 
-* ...
+```
+bundle install
+rake db:create db:migrate db:seed
+```
