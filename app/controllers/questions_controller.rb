@@ -5,11 +5,16 @@ class QuestionsController < ApplicationController
   # GET /questions
   def index
     if params[:q]
-      @questions = Question.matching_terms.select(params[:q]){ |x| x.private_question == false }
+      @questions = Question.matching_terms(params[:q]).select{ |x| x.private_question == false }
+      logger.warn @questions.blank?
+      unless @questions.blank?
+        render json: @questions
+      else
+        render json: {text: "no content"}, status: :no_content
+      end
     else
-      @questions = Question.all.select{ |x| x.private_question == false }
+      render json: {error: 'Bad request. Query is missing'}, status: :bad_request
     end
-    render json: @questions
   end
 
   # GET /questions/1
