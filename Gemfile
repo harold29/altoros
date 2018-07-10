@@ -29,6 +29,7 @@ gem 'active_model_serializers'
 gem 'knock'
 gem 'rack-attack'
 gem 'pg_search'
+gem 'factory_bot_rails'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
@@ -40,7 +41,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'coveralls', require: false
-  gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
