@@ -4,14 +4,16 @@ class QuestionsController < ApplicationController
 
   # GET /questions
   def index
-    @questions = Question.all
-
+    if params[:q]
+      @questions = Question.matching_terms(params[:q])
+    else
+      @questions = Question.all
+    end
     render json: @questions
   end
 
   # GET /questions/1
   def show
-    # authenticate
     if @question.private_question
       @tenant.add_fail_req
       render json: {}, status: :forbidden
