@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :update, :destroy]
+  before_action :set_question, only: [:show]
   before_action :authenticate
 
   # GET /questions
@@ -21,31 +21,6 @@ class QuestionsController < ApplicationController
       @tenant.add_success_req
       render json: @question
     end
-  end
-
-  # POST /questions
-  def create
-    @question = Question.new(question_params)
-
-    if @question.save
-      render json: @question, status: :created, location: @question
-    else
-      render json: @question.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /questions/1
-  def update
-    if @question.update(question_params)
-      render json: @question
-    else
-      render json: @question.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /questions/1
-  def destroy
-    @question.destroy
   end
 
   private
