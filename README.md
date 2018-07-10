@@ -12,8 +12,6 @@
 Questions
 `https://altoros-test.herokuapp.com/questions?api_key=[api_key]&q=[query]`
 
-If query param is empty it returns all questions
-
 Specific Question
 `https://altoros-test.herokuapp.com/questions/[question_id]?api_key=[api_key]`
 
